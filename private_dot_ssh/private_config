@@ -1,0 +1,281 @@
+Host nodevo07
+    ProxyJump deploy
+    HostName 185.161.45.39
+    Port 2210
+    User webadmin
+Host nodevo08
+    HostName 185.161.45.92
+    ProxyJump deploy
+    Port 2221
+    User webadmin
+Host nodevo09
+    HostName 185.161.45.102
+    ProxyJump deploy
+    Port 2222
+    User webadmin
+Host nodevo10
+    HostName 185.161.45.110
+    ProxyJump deploy
+    Port 2231
+    User webadmin
+Host nodevo11
+    HostName 185.161.45.120
+    ProxyJump deploy
+    Port 2232
+    User webadmin
+Host nodevo12
+    HostName 185.161.45.148
+    ProxyJump deploy
+    Port 2241
+    User webadmin
+Host nodevo13
+    HostName 185.252.158.96
+    ProxyJump deploy
+    Port 2210
+    User webadmin
+Host nodevo14
+    HostName 185.252.158.199
+    ProxyJump deploy
+    Port 22
+    User webadmin
+   
+Host nodevo15
+    HostName 185.252.158.206
+    ProxyJump deploy
+    Port 2240
+    User webadmin
+
+Host nodevo01
+    HostName 185.252.158.157
+    ProxyJump deploy
+    Port 2220
+    User webadmin
+Host cdr
+    HostName 46.18.195.210
+    ProxyJump deploy
+    Port 22
+    User 7487_webmaster
+Host cdr.dev
+    HostName 87.252.2.34
+    ProxyJump deploy
+    Port 22
+    User dev_mhn
+Host cdr.preprod
+    HostName 87.252.2.34
+    ProxyJump deploy
+    Port 22
+    User pp_mhn
+Host cdr.prod
+    HostName 87.252.2.36
+    ProxyJump deploy
+    Port 22
+    User mhn
+Host gp
+    HostName 87.252.12.238
+    ProxyJump deploy
+    Port 22
+    User cf135111
+Host rmngp.preprod
+    HostName 87.252.12.242
+    ProxyJump deploy
+    Port 22
+    User grandpalais_pp
+Host rmngp.prod
+    HostName 87.252.12.238
+    ProxyJump deploy
+    Port 22
+    User cf135111
+Host scn
+    HostName 87.252.12.239
+    ProxyJump deploy
+    Port 22
+    User scn2020
+Host scn.prod
+    HostName 87.252.12.239
+    ProxyJump deploy
+    Port 22
+    User scn2020
+Host scn.preprod
+    HostName 87.252.12.242
+    Port 22
+    User scn2020_pp
+    ProxyJump deploy
+    IdentityFile ~/.ssh/id_rsa
+Host kibana
+    HostName 34.73.66.16 
+    Port 22
+    User edafonseca
+Host dev
+    HostName 10.211.55.5
+    Port 22
+    User edafonseca
+Host perso.old
+    HostName 54.37.224.84
+    Port 22
+    User root
+Host runner
+    HostName 172.31.45.55
+    IdentityFile ~/.ssh/aws-gitlab-runner.pem
+    Port 22
+    User admin
+Host jdm.aws
+    HostName 15.236.124.55
+    ProxyJump deploy
+    Port 22
+    User nodevo
+
+Host jdm.prod.1
+    HostName 51.38.235.23
+    ProxyJump deploy
+    Port 22
+    User debian
+
+Host jdm.prod.2
+    HostName 146.59.225.164
+    ProxyJump deploy
+    Port 22
+    User debian
+
+Host cfc.prod
+    HostName 87.252.12.245
+    ProxyJump deploy
+    Port 22
+    User capitale
+
+Host fmsh.prod
+    HostName 193.51.124.170
+    ProxyJump deploy
+    Port 22
+    User wfmsh
+
+Host fmsh.preprod
+    HostName 193.51.124.171
+    ProxyJump deploy
+    Port 22
+    User wfmsh
+
+Host umifre.prod
+    HostName 193.51.124.164
+    ProxyJump deploy
+    Port 22
+    User wumifre
+
+Host audioblog.preprod.1
+    HostName artef-preprod-audioblog.sdv.fr
+    ProxyJump deploy
+    Port 22
+    User nodevo
+
+Host audioblog.preprod.2
+    HostName artef-preprod-audioblog-db.sdv.fr
+    ProxyJump deploy
+    Port 22
+    User nodevo
+
+Host audioblog.prod.1
+    HostName artef-prod-audioblog.sdv.fr
+    ProxyJump deploy
+    Port 22
+    User nodevo
+
+Host audioblog.prod.2
+    HostName artef-prod-audioblog-db.sdv.fr
+    ProxyJump deploy
+    Port 22
+    User nodevo
+
+Host artdelislam.preprod
+    HostName 87.252.12.242
+    ProxyJump deploy
+    Port 22
+    User preprod_islam
+
+Host artdelislam.prod
+    HostName 87.252.12.245
+    ProxyJump deploy
+    Port 22
+    User expo_islam
+
+Host jott.prod
+    HostName jott.evolix.net
+    User justoverthetop
+    Port 22
+    ProxyJump deploy
+
+Host jott.preprod
+    HostName jott.evolix.net
+    User justoverthetop
+    Port 22
+    ProxyJump deploy
+
+Host fmsh.preprod.new
+    Hostname 193.51.124.226
+    User wfmsh
+    Port 22
+    ProxyJump deploy
+
+Host deploy
+    HostName runner.deploy.nodevo.com
+    user ec2-user
+    Port 22
+
+Host browserless
+    HostName 52.47.43.56
+    user ec2-user
+    ProxyJump deploy
+
+Host perso
+    HostName 217.160.195.175
+    Port 22
+    User root
+
+Host mydev
+    HostName 109.11.193.238
+    Port 2221
+    User edafonseca
+
+Host m1
+    HostName 193.70.81.154
+    Port 2219
+    User edafonseca
+    LocalForward 8080 127.0.0.1:8080
+    LocalForward 3000 127.0.0.1:3000
+    LocalForward 8005 127.0.0.1:8005
+    LocalForward 8008 127.0.0.1:8008
+    LocalForward 8010 127.0.0.1:80
+    LocalForward 3316 127.0.0.1:3316
+
+Host m2
+    HostName 51.254.44.235
+    Port 2219
+    User edafonseca
+    LocalForward 8080 127.0.0.1:8080
+    LocalForward 8081 127.0.0.1:8081
+
+Host m1mboron
+    HostName 193.70.81.154
+    Port 2219
+    User mboron
+
+Host ldlc
+    HostName ec2-13-38-101-171.eu-west-3.compute.amazonaws.com
+    Port 22
+    User ec2-user
+    IdentityFile ~/.ssh/manu-paris-2.pem
+
+Host cloud9
+    User ec2-user
+    HostName i-06a9b5a80fd758452
+    ProxyCommand sh -c "~/.ssh/aws-proxy.sh %h %p"
+
+# BEGIN: Platform.sh certificate configuration
+Host *.platform.sh
+  Include /home/edafonseca/.platformsh/ssh/*.config
+Host *
+# END: Platform.sh certificate configuration
+
+# BEGIN: Platform.sh certificate configuration
+Host *.platform.sh
+  Include /home/edafonseca/.platformsh/ssh/*.config
+Host *
+# END: Platform.sh certificate configuration
